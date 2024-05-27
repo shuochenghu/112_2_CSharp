@@ -33,13 +33,14 @@
             this.outputDescriptionLabel = new System.Windows.Forms.Label();
             this.countriesListBox = new System.Windows.Forms.ListBox();
             this.openFile = new System.Windows.Forms.OpenFileDialog();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // exitButton
             // 
-            this.exitButton.Location = new System.Drawing.Point(136, 154);
+            this.exitButton.Location = new System.Drawing.Point(136, 142);
             this.exitButton.Name = "exitButton";
-            this.exitButton.Size = new System.Drawing.Size(75, 39);
+            this.exitButton.Size = new System.Drawing.Size(75, 36);
             this.exitButton.TabIndex = 7;
             this.exitButton.Text = "Exit";
             this.exitButton.UseVisualStyleBackColor = true;
@@ -47,9 +48,9 @@
             // 
             // getCountriesButton
             // 
-            this.getCountriesButton.Location = new System.Drawing.Point(55, 154);
+            this.getCountriesButton.Location = new System.Drawing.Point(55, 142);
             this.getCountriesButton.Name = "getCountriesButton";
-            this.getCountriesButton.Size = new System.Drawing.Size(75, 39);
+            this.getCountriesButton.Size = new System.Drawing.Size(75, 36);
             this.getCountriesButton.TabIndex = 6;
             this.getCountriesButton.Text = "Get Countries";
             this.getCountriesButton.UseVisualStyleBackColor = true;
@@ -59,7 +60,7 @@
             // 
             this.outputDescriptionLabel.AutoSize = true;
             this.outputDescriptionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.outputDescriptionLabel.Location = new System.Drawing.Point(15, 13);
+            this.outputDescriptionLabel.Location = new System.Drawing.Point(15, 12);
             this.outputDescriptionLabel.Name = "outputDescriptionLabel";
             this.outputDescriptionLabel.Size = new System.Drawing.Size(223, 16);
             this.outputDescriptionLabel.TabIndex = 5;
@@ -68,16 +69,22 @@
             // countriesListBox
             // 
             this.countriesListBox.FormattingEnabled = true;
-            this.countriesListBox.Location = new System.Drawing.Point(43, 40);
+            this.countriesListBox.ItemHeight = 12;
+            this.countriesListBox.Location = new System.Drawing.Point(43, 37);
             this.countriesListBox.Name = "countriesListBox";
-            this.countriesListBox.Size = new System.Drawing.Size(171, 95);
+            this.countriesListBox.Size = new System.Drawing.Size(171, 88);
             this.countriesListBox.TabIndex = 4;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+//            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(255, 206);
+            this.ClientSize = new System.Drawing.Size(255, 190);
             this.Controls.Add(this.exitButton);
             this.Controls.Add(this.getCountriesButton);
             this.Controls.Add(this.outputDescriptionLabel);
@@ -96,6 +103,7 @@
         private System.Windows.Forms.Label outputDescriptionLabel;
         private System.Windows.Forms.ListBox countriesListBox;
         private System.Windows.Forms.OpenFileDialog openFile;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 
