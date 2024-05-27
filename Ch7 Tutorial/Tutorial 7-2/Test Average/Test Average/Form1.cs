@@ -13,7 +13,7 @@ namespace Test_Average
 {
     public partial class Form1 : Form
     {
-        private const int SIZE = 5;
+        private const int SIZE = 40;
         public Form1()
         {
             InitializeComponent();
@@ -23,6 +23,8 @@ namespace Test_Average
         {
             int[] scores = new int[SIZE];
             int highestScore = 0;
+            int lowest = 0;
+            double average = 0.0;
             GetScoresFromFile(scores);
 
             //for (int i = 0; i < scores.Length; i++)
@@ -37,6 +39,35 @@ namespace Test_Average
             highestScore = Highest(scores);
             highScoreLabel.Text = highestScore.ToString();
 
+            lowest = Lowest(scores);
+            lowScoreLabel.Text = lowest.ToString();
+
+            average = Average(scores);
+            averageScoreLabel.Text = average.ToString();
+
+        }
+
+        private double Average(int[] scores)
+        {
+            int sum = 0;
+            for (int i = 0;  i < scores.Length;  i++)
+            {
+                sum += scores[i];  // sum = sum + score[i]
+            }
+            //MessageBox.Show("SUM = " + sum);
+            return (double)sum / scores.Length;  //casting
+        }
+        private int Lowest(int[] scores)
+        {
+            int lowest = scores[0];
+            for (int i = 1; i < scores.Length; i++)
+            {
+                if (scores[i] < lowest)
+                {
+                    lowest = scores[i];
+                }
+            }
+            return lowest;
         }
 
         private int Highest(int[] scores)
