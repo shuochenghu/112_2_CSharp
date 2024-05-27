@@ -25,6 +25,7 @@ namespace Test_Average
             int highestScore = 0;
             int lowest = 0;
             double average = 0.0;
+            int median = 0;
             GetScoresFromFile(scores);
 
             //for (int i = 0; i < scores.Length; i++)
@@ -45,6 +46,17 @@ namespace Test_Average
             average = Average(scores);
             averageScoreLabel.Text = average.ToString();
 
+            median = Median(scores);
+            medianScoreLabel.Text = median.ToString();
+
+        }
+
+        private int Median(int[] scores)
+        {
+            Array.Sort(scores);
+            for(int i = 0; i < scores.Length; i++)
+                sortedScoresListBox.Items.Add("["+ i + "] :" + scores[i]);
+            return scores[scores.Length/2];
         }
 
         private double Average(int[] scores)
